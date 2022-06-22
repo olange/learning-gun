@@ -1,6 +1,6 @@
-# Learning ‹Subject›
+# Learning GUN.eco database
 
-Learning using ‹Subject› – articles, useful resources, courseware, personal notes.
+Learning to use the GUN.eco database – articles, useful resources, courseware, personal notes.
 
 ## Overview
 
