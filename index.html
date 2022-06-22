@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        width: 100%; height: 100%;
+        padding: .25rem .75rem; margin: 0;
+      }
+      textarea {
+        width: 90%; height: 5rem;
+      }
+    </style>
+    <script src="./node_modules/gun/gun.js"></script>
+    <script src="./node_modules/gun/sea.js"></script>
+  </head>
+  <body>
+
+    <section id="auth">
+      <h3>Authentication</h3>
+      <form id="sign">
+        <input id="alias" placeholder="username">
+        <input id="pass" type="password" placeholder="passphrase">
+        <input id="in" type="submit" value="sign in">
+        <input id="up" type="button" value="sign up">
+      </form>
+    </section>
+
+    <section id="todoApp">
+      <h3>To-do mini-app</h3>
+
+      <ul id="todo"></ul>
+
+      <form id="said">
+          <input id="say">
+          <input id="speak" type="submit" value="speak">
+      </form>
+    </section>
+
+    <section id="pastebin">
+      <h3>Public paste-bin</h3>
+      <textarea id="paste" placeholder="paste here!"></textarea>
+    </section>
+
+    <script>
+      const gun = Gun(['http://localhost:8765/gun']);
+
+      // Public paste-bin (textarea)
+      copy = gun.get('test').get('paste');
+      paste.oninput = () => { copy.put(paste.value) };
+      copy.on((data) => { paste.value = data });
+
+      // Sign-up & sign-in
+      const user = gun.user(); // User chain
+      const authSection = document.querySelector('#auth'),
+            signUpBtn = document.querySelector('#up'),
+            signUpForm = document.querySelector('#sign'),
+            aliasInput = document.querySelector('#alias'),
+            passwordInput = document.querySelector('#pass');
+
+      // On sign-up
+      signUpBtn.addEventListener( 'click', (e) => {
+        user.create( aliasInput.value, passwordInput.value);
+      });
+
+      // On sign-in
+      signUpForm.addEventListener( 'submit', (e) => {
+        e.preventDefault();
+        user.auth( aliasInput.value, passwordInput.value);
+      });
+
+      // To-do app
+      const saidForm = document.querySelector('#said'),
+            sayInput = document.querySelector('#say'),
+            listElt = document.querySelector('ul#todo');
+
+      saidForm.addEventListener( 'submit', (e) => {
+        e.preventDefault();
+        if( !user.is) { return } // user.is will be falsy if the user is not logged in
+        user.get( 'said').set( sayInput.value);
+        sayInput.value = "";
+      });
+
+      function UI( say, id){
+        // $('#' + id).get(0) || $('<li>').attr('id', id).appendTo('ul');
+        let itemElt = document.querySelector( '#' + id);
+        if( itemElt == null) {
+          itemElt = document.createElement( 'li');
+          itemElt.setAttribute( 'id', id);
+          listElt.appendChild( itemElt);
+        }
+        itemElt.textContent = say;
+      };
+
+      gun.on( 'auth', function(){
+        authSection.hidden = true;
+        user.get( 'said').map().once( UI);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "learning-gun",
+  "version": "1.0.0",
+  "description": "Learning to use the GUN.eco database",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node --prof node_modules/gun/examples/http.js"
+  },
+  "author": "Olivier Lange",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "gun": "^0.2020.1237"
+  }
+}
