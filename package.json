@@ -4,7 +4,7 @@
   "description": "Learning to use the GUN.eco database",
   "main": "index.js",
   "scripts": {
-    "serve": "node --prof node_modules/gun/examples/http.js"
+    "serve": "node --prof http.js"
   },
   "author": "Olivier Lange",
   "license": "Apache-2.0",
