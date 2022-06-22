@@ -1,12 +1,12 @@
-# Learning GUN.eco database
+# Learning the GUN.eco database
 
-Learning to use the GUN.eco database – articles, useful resources, courseware, personal notes.
+Learning to use the [GUN.eco](https://gun.eco) database – articles, useful resources, courseware, personal notes.
 
 ## Overview
 
 ## Learning / Codelabs
 
-TODO
+1. [To-do dapp](codelabs/1-todo-dapp/README.md)
 
 ## Experiments
 
