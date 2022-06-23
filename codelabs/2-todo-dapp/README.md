@@ -1,6 +1,6 @@
 # Codelabs › To-do dapp
 
-A <em>to-do dapp<em> adapted from the [To-do dapp tutorial](https://gun.eco/docs/Todo-Dapp) of GUN.eco for vanilla DOM & JS.
+A _to-do dapp_ adapted from the [To-do dapp tutorial](https://gun.eco/docs/Todo-Dapp) of GUN.eco for vanilla DOM & JS.
 
 ## Usage
 

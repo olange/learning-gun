@@ -1,6 +1,6 @@
 # Codelabs › Public pastebin
 
-A <em>public pastebin<em> adapted from the [‹Hello World› tutorial](https://gun.eco/docs/Hello-World) of GUN.eco for vanilla DOM & JS.
+A _public pastebin_ adapted from the [‹Hello World› tutorial](https://gun.eco/docs/Hello-World) of GUN.eco for vanilla DOM & JS.
 
 ## Usage
 
