@@ -4,8 +4,8 @@
   "description": "Learning to use the GUN database & ecosystem",
   "main": "index.js",
   "scripts": {
-    "start": "run-p -r -l serve:gun-relay start:codelabs:1-todo-dapp",
-    "start:codelabs:1-todo-dapp": "npx parcel codelabs/1-todo-dapp/index.html",
+    "start": "run-p -r -l serve:gun-relay serve:codelabs",
+    "serve:codelabs": "npx parcel index.html",
     "serve:gun-relay": "node serve-gun-relay.js"
   },
   "author": "Olivier Lange",
