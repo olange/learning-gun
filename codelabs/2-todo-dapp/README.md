@@ -4,4 +4,4 @@ A <em>to-do dapp<em> adapted from the [To-do dapp tutorial](https://gun.eco/docs
 
 ## Usage
 
-Execute `npm run start` on the command-line and open [`http://localhost:1234/codelabs/1-todo-dapp/`](http://localhost:1234/codelabs/1-todo-dapp/) in your browser.
+Execute `npm run start` on the command-line and open [`http://localhost:1234/codelabs/2-todo-dapp/`](http://localhost:1234/codelabs/2-todo-dapp/) in your browser.

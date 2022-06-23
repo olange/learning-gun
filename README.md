@@ -6,7 +6,7 @@ Learning to use the [GUN](https://gun.eco) database and ecosystem – articles, 
 
 ## Learning / Codelabs
 
-1. [To-do dapp](codelabs/1-todo-dapp/README.md)
+1. [To-do dapp](codelabs/2-todo-dapp/README.md)
 
 ## Experiments
 

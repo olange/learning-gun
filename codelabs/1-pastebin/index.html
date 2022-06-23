@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../../assets/styles/basics.css">
+    <script src="../../node_modules/gun/gun.js"></script>
+    <script src="../../node_modules/gun/sea.js"></script>
+  </head>
+  <body>
+    <a href="../../index.html">« codelabs</a>
+
+    <section id="pastebin">
+      <h3>Public paste-bin</h3>
+      <textarea id="paste" placeholder="paste here!"></textarea>
+    </section>
+
+    <script>
+      const gun = Gun([ 'http://localhost:8765/gun' ]);
+
+      copy = gun.get('test').get('paste');
+      paste.oninput = () => { copy.put(paste.value) };
+      copy.on((data) => { paste.value = data });
+    </script>
+  </body>
+</html>

@@ -6,6 +6,7 @@
     <script src="../../node_modules/gun/sea.js"></script>
   </head>
   <body>
+    <a href="../../index.html">« codelabs</a>
 
     <section id="auth">
       <h3>Authentication</h3>
@@ -28,18 +29,8 @@
       </form>
     </section>
 
-    <section id="pastebin">
-      <h3>Public paste-bin</h3>
-      <textarea id="paste" placeholder="paste here!"></textarea>
-    </section>
-
     <script>
       const gun = Gun([ 'http://localhost:8765/gun' ]);
-
-      // Public paste-bin (textarea)
-      copy = gun.get('test').get('paste');
-      paste.oninput = () => { copy.put(paste.value) };
-      copy.on((data) => { paste.value = data });
 
       // Sign-up & sign-in
       const user = gun.user(); // User chain
