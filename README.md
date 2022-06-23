@@ -4,9 +4,11 @@ Learning to use the [GUN](https://gun.eco) database and ecosystem – articles, 
 
 ## Learning / Codelabs
 
-1. [Public pastebin](codelabs/1-pastebin/README.md)
-2. [To-do dapp](codelabs/2-todo-dapp/README.md)
+1. [Public pastebin](codelabs/1-pastebin/)
+2. [To-do dapp](codelabs/2-todo-dapp/)
 
 ## Usage
 
-Execute `npm run start` on the command-line and open [`http://localhost:1234/`](http://localhost:1234/) in your browser.
+Execute `npm start` on the command-line and open [`http://localhost:1234/`](http://localhost:1234/) in your browser.
+
+<img src="assets/images/0-npm-start.png" height="350">
