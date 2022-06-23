@@ -2,6 +2,7 @@
 .parcel-cache/
 node_modules/
 dist/
+config/*.pem
 radata/
 .DS_Store
 *.log

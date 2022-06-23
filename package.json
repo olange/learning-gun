@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "run-p -r -l serve:gun-relay serve:codelabs",
-    "serve:codelabs": "npx parcel index.html",
-    "serve:gun-relay": "env PEERS=https://gun-manhattan.herokuapp.com/gun node serve-gun-relay.js"
+    "serve:codelabs": "npx parcel --cert config/selfsigned.cert.pem --key config/selfsigned.key.pem index.html",
+    "serve:gun-relay": "env PEERS=https://gun-manhattan.herokuapp.com/gun node serve-gun-relay.js",
+    "postinstall": "node config/selfsigned.generate.js"
   },
   "author": "Olivier Lange",
   "license": "Apache-2.0",
@@ -14,6 +15,7 @@
     "gun": "^0.2020.1237"
   },
   "devDependencies": {
+    "https-pem": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.6.2"
   }
