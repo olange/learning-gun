@@ -1,6 +1,6 @@
 # Learning the GUN.eco database
 
-Learning to use the [GUN.eco](https://gun.eco) database – articles, useful resources, courseware, personal notes.
+Learning to use the [GUN](https://gun.eco) database and ecosystem – articles, useful resources, courseware, personal notes.
 
 ## Overview
 

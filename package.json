@@ -1,15 +1,20 @@
 {
   "name": "learning-gun",
   "version": "1.0.0",
-  "description": "Learning to use the GUN.eco database",
+  "description": "Learning to use the GUN database & ecosystem",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:todo-app",
-    "start:todo-app": "node --prof http.js"
+    "start": "run-p -r -l serve:gun-relay start:codelabs:1-todo-dapp",
+    "start:codelabs:1-todo-dapp": "npx parcel codelabs/1-todo-dapp/index.html",
+    "serve:gun-relay": "node serve-gun-relay.js"
   },
   "author": "Olivier Lange",
   "license": "Apache-2.0",
   "dependencies": {
     "gun": "^0.2020.1237"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.6.2"
   }
 }
