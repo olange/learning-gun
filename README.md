@@ -2,28 +2,11 @@
 
 Learning to use the [GUN](https://gun.eco) database and ecosystem – articles, useful resources, courseware, personal notes.
 
-## Overview
-
 ## Learning / Codelabs
 
-1. [To-do dapp](codelabs/2-todo-dapp/README.md)
+1. [Public pastebin](codelabs/1-pastebin/README.md)
+2. [To-do dapp](codelabs/2-todo-dapp/README.md)
 
-## Experiments
+## Usage
 
-TODO
-
-## Articles
-
-TODO
-
-## Videos & Teaching games
-
-TODO
-
-## Supporting and related technologies
-
-TODO
-
-## Additional resources
-
-TODO
+Execute `npm run start` on the command-line and open [`http://localhost:1234/`](http://localhost:1234/) in your browser.
