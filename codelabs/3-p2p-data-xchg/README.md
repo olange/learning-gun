@@ -13,9 +13,4 @@ Data which you type in the _out_ box will be replicated to participants' _in_ bo
 Such data are meant to emulate the game state data that would be exchanged between participants in a shared game.
 
 
-## Note
-
-Comparing with **1-pastebin**, this demo uses `set` instead of `put` and wraps the data in a simple js object, as required by `set`.
-
-
 <img src="../../assets/images/3-p2p-data-exchange.jpg" height="350">
