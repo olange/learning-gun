@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../../assets/styles/basics.css">
+    <script src="../../node_modules/gun/gun.js"></script>
+    <script src="../../node_modules/gun/sea.js"></script>
+  </head>
+  <body>
+    <nav><a href="../../index.html">« codelabs</a></nav>
+
+    <section id="pastebin">
+      <h3>P2P data exchange</h3>
+      <h4>out</h4>
+      <textarea id="paste_out" placeholder="outgoing"></textarea>
+      <h4>in</h4>
+      <textarea readonly id="paste_in" placeholder="incoming"></textarea>
+    </section>
+
+    <section id="explainer">
+      A <em>p2p data exchange</em> adapted from the <cite>
+      <a href="https://gun.eco/docs/Hello-World">‹Hello World› tutorial</a>
+      </cite> of GUN.
+    </section>
+
+    <script>
+      const gun = Gun([ 'http://localhost:8765/gun',
+                        'https://gun-manhattan.herokuapp.com/gun' ]);
+
+      copy = gun.get('test').get('p2p-data');
+
+      paste_out.oninput = () => {
+        copy.put(toObj(paste_out.value))
+      };
+      copy.on((data) => { paste_in.value = fromObj(data) });
+
+      function toObj(data) {
+        return {'key1': data};'}
+      }
+      function fromObj(obj) {
+        return obj.key1;
+      }
+    </script>
+  </body>
+</html>
