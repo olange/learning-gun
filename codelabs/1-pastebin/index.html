@@ -10,7 +10,8 @@
 
     <section id="pastebin">
       <h3>Public paste-bin</h3>
-      <textarea id="paste" placeholder="paste here!"></textarea>
+      <button id="button_clear">Clear</button></br></br>
+      <textarea id="paste_area" placeholder="paste here!"></textarea>
     </section>
 
     <section id="explainer">
@@ -24,8 +25,16 @@
                         'https://gun-manhattan.herokuapp.com/gun' ]);
 
       copy = gun.get('test').get('paste');
-      paste.oninput = () => { copy.put(paste.value) };
-      copy.on((data) => { paste.value = data });
+      paste_area.oninput = () => { copy.put(paste_area.value) };
+      copy.on((data) => { paste_area.value = data });
+    </script>
+
+    <script>
+      const button_clear = document.getElementById("button_clear");
+      button_clear.addEventListener("click", () => {
+        document.getElementById("paste_area").placeholder = "Cleared.";
+        copy = gun.get("test").get("paste").put("");
+      });
     </script>
   </body>
 </html>
