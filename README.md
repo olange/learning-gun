@@ -6,6 +6,7 @@ Learning to use the [GUN](https://gun.eco) database and ecosystem – articles, 
 
 1. [Public pastebin](codelabs/1-pastebin/)
 2. [To-do dapp](codelabs/2-todo-dapp/)
+2. [Data exchange](codelabs/3-data-xchg/)
 
 ## Usage
 
